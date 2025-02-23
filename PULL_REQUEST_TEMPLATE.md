@@ -1,7 +1,7 @@
 ## Description
 <!-- Provide a brief summary of the changes -->
 
-## Related Issue
+## Related Issues
 <!-- Link to the Jira task this PR addresses -->
 
 ## Screenshots (if applicable)

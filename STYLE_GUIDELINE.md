@@ -17,7 +17,7 @@ We strive for code readability and scalability!
 
 
 ## Structure
-- Order of class fields: static, constant, serialized, properties, public variables, protected/private variables, Unity methods (by call order), other methods.
+- Order of class fields: static, constant, serialized, properties, public variables, protected/private variables, standart Unity methods (by call order), other methods.
 - No global classes - every script belongs to a namespace. Each game must have its own namespace. Keep namespace structure aligned with folder hierarchy, but make it reasonable and no deeper than two levels (excluding game name).
 ```csharp
 // Folder strusture: Game\Core\Audio\Managers.
@@ -41,7 +41,7 @@ private int myField;
 - Place all attributes above the variable declaration (never inline).
 
 ### Layout
-- Use expression bodies for methods and propetries for simple expressions whenever possible. However, do not use if for standart Unity methods. 
+- Use expression bodies for methods and propetries with simple expressions whenever possible. However, do not use if for standart Unity methods. 
 ```csharp
 // Bad.
 public int MyMethod()
@@ -58,7 +58,7 @@ void Update()
     myCount++;
 }
 ```
-- Use `{ braces }` even for single-line `if/else` statements, leaving room for future additions.  
+- Use `{ braces }` even for single-line `for/if/else` statements, leaving room for future additions.  
 - Separate logic and `return` statement with one empty line in between.
 ```csharp
 if (myFlag == true)

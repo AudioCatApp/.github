@@ -58,7 +58,7 @@ void Update()
     myCount++;
 }
 ```
-- Use `{ braces }` even for single-line `for/if/else` statements, leaving room for future additions.  
+- Use `{ braces }` even for single-line control flow statements (e.g. `if`, `for`, `try`, etc.), leaving room for future additions.  
 - Separate logic and `return` statement with one empty line in between.
 ```csharp
 if (myFlag == true)
@@ -73,7 +73,7 @@ if (myFlag == true)
 
 ### Directives
 - Allign directives (e.g. `#if`, `#define`, etc.) to the leftmost position with no indentation or tabulation.
-- Use `#region` to separate code blocks. BUT! First consider whether the code should be moved to a separate file instead.
+- Use `#region` to separate code blocks. BUT! First consider whether the code should be moved to a separate file instead. Align it as IDE automatically does.
 ```csharp
 #region My Region Name
     ...

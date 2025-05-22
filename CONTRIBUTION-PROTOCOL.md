@@ -1,4 +1,4 @@
-# :rocket: Contribution Protocol (Branches and Pull Requests) :rocket:
+# :rocket: Contribution Protocol :rocket:
 
 The foundation for smooth merges and stable main.
 
@@ -7,8 +7,8 @@ The foundation for smooth merges and stable main.
 - [Branch Basics](#branch-basics)
 - [Pull Requests](#pull-requests)
 - [Review Process](#review-process)
-  - [Reviewee (Assignee)](#reviewee-assignee)
-  - [Reviewer](#reviewer)
+  - [For Reviewee (Assignee)](#for-reviewee-assignee)
+  - [For Reviewer](#for-reviewer)
 - [Merging](#merging)
 
 
@@ -20,7 +20,7 @@ The foundation for smooth merges and stable main.
 - There are no strict rules about commit name/description, however the recommendation is to keep it short and understandable.
 
 ## Pull Requests
-- Rebase your feature branch on top of main and resolve all the conflicts (if exist), then force-push.
+- Rebase feature branch on top of main and resolve all the conflicts (if exist), then force-push.
 ```
 git checkout your-branch
 git fetch origin
@@ -33,14 +33,14 @@ git push --force
 
 ## Review Process
 
-### Reviewee (Assignee)
+### For Reviewee (Assignee)
 - Address all comments from all reviewers before merging. 
 - *Non necessarly, but highly appreciated:* mark comments as addressed by replying with `Done.` or simply reacting with an emoji (e.g. :+1:).
 - If the change will not be made (or the comment was a question/suggestion), respond with a reasonable explanation.
 - Do not resolve conversations yourself – the reviewer does that.
 - Once all comments are addressed, re-request review from the relevant person.
 
-### Reviewer
+### For Reviewer
 - Leave clear and constructive feedback on all added/changed code.
 - Only resolve conversations when the change is fully addressed or the response is satisfactory.
 - Approve when the PR is ready to be merged, not in advance.
@@ -48,6 +48,7 @@ git push --force
 ## Merging
 - The reviewee (assignee) is responsible for merging. PR can be merged when:
   - All conversations are resolved.
-  - Approvals from every reviewer who left comments is given.
-
-- Corresponding branch will be deleted automatically.
+  - Approvals from every reviewer who left comments is given and no unreviewed changes are made.
+  - Branch is 0 commits behind main (if not - rebase).
+  - All conflicts with main branch are resolved.
+- Corresponding feature branch will be deleted automatically after successful merge.

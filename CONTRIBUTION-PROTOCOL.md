@@ -35,7 +35,7 @@ git push --force
 
 ### For Reviewee (Assignee)
 - Address all comments from all reviewers before merging. 
-- *Non necessarly, but highly appreciated:* mark comments as addressed by replying with "Done." or simply reacting with an emoji (e.g. :+1:).
+- *Not necessarily, but highly appreciated:* mark comments as addressed by replying with "Done." or simply reacting with an emoji (e.g. :+1:).
 - If the change will not be made (or the comment was a question/suggestion), respond with a reasonable explanation.
 - Do not resolve conversations yourself – the reviewer does that.
 - Once all comments are addressed, re-request review from the relevant person.

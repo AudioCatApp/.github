@@ -35,7 +35,7 @@ git push --force
 
 ### For Reviewee (Assignee)
 - Address all comments from all reviewers before merging. 
-- *Non necessarly, but highly appreciated:* mark comments as addressed by replying with `Done.` or simply reacting with an emoji (e.g. :+1:).
+- *Non necessarly, but highly appreciated:* mark comments as addressed by replying with "Done." or simply reacting with an emoji (e.g. :+1:).
 - If the change will not be made (or the comment was a question/suggestion), respond with a reasonable explanation.
 - Do not resolve conversations yourself – the reviewer does that.
 - Once all comments are addressed, re-request review from the relevant person.
@@ -46,9 +46,8 @@ git push --force
 - Approve when the PR is ready to be merged, not in advance.
 
 ## Merging
-- The reviewee (assignee) is responsible for merging. PR can be merged when:
-  - All conversations are resolved.
+- The reviewee (assignee) is responsible for merging. PR can be merged ONLY when:
+  - All conversations are resolved by reviewers.
   - Approvals from every reviewer who left comments is given and no unreviewed changes are made.
   - Branch is 0 commits behind main (if not - rebase).
-  - All conflicts with main branch are resolved.
 - Corresponding feature branch will be deleted automatically after successful merge.

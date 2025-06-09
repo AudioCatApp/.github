@@ -18,7 +18,7 @@ We strive for code readability and scalability!
 - Fortunally, letters are for free. Long but self-explanatory name is better than short but unclear one. Avoid abbreviations unless they're widely understood (`mainSoundManager`, not `msm`).
 - Omit access modifiers for Unity methods only, always specify them for any other fields.
 - Interface names must start with letter `I` and describe a capability (e.g. `IComparable`, `IDrinkable`).
-- When a class inherits from a self-explanatory base and its role purpose are clear from the context, ignore the base name (e.g. `MainMenu` as a child of `UIManager` is totally fine), but if the name alone is too vague and the role is unclear, keep the base name as prefix (`AudioManagerWordy`, not just `Wordy` that inherits from `AudioManager` class).
+- When a class inherits from a self-explanatory base and its role and purpose are clear from the context, ignore the base name (e.g. `MainMenu` as a child of `UIManager` is totally fine), but if the name alone is too vague and the role is unclear, keep the base name as prefix (`AudioManagerWordy`, not just `Wordy` that inherits from `AudioManager` class).
 - Method names should include verbs or verb phrases, boolean-returning methods should start with "is", "can", "has" (e.g. `PlayAudio()`, `CanWork()`, `HasTime()`).
 - Name events/actions following the OnSomethingHappened pattern (e.g. `OnVictoriaGotTired`, `OnBenjiSucceeded`).
 

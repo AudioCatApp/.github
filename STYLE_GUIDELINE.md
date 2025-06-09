@@ -7,18 +7,25 @@ We strive for code readability and scalability!
 - [Naming](#naming)
 - [Structure](#structure)
 - [Formatting](#formatting)
+  - [Attributes](#attributes)
+  - [Layout](#layout)
+  - [Directives](#directives)
 - [Comments](#comments)
 
 
 ## Naming
-- Use `PascalCase` for class names, `camelCase` for variables and method, and `SCREAMING_SNAKE_CASE` for constants.
-- Long, but self-explanatory name is better than short, but unclear one. Avoid abbreviations unless they're widely understood (`mainSoundManager`, not `msm`).
+- Use `PascalCase` for class, interface, enum, struct, method, property names, `camelCase` for variables, and `SCREAMING_SNAKE_CASE` for constants.
+- Fortunally, letters are for free. Long but self-explanatory name is better than short but unclear one. Avoid abbreviations unless they're widely understood (`mainSoundManager`, not `msm`).
 - Omit access modifiers for Unity methods only, always specify them for any other fields.
+- Interface names must start with letter `I` and describe a capability (e.g. `IComparable`, `IDrinkable`).
+- When a class inherits from a self-explanatory base and its role purpose are clear from the context, ignore the base name (e.g. `MainMenu` as a child of `UIManager` is totally fine), but if the name alone is too vague and the role is unclear, keep the base name as prefix (`AudioManagerWordy`, not just `Wordy` that inherits from `AudioManager` class).
+- Method names should include verbs or verb phrases, boolean-returning methods should start with "is", "can", "has" (e.g. `PlayAudio()`, `CanWork()`, `HasTime()`).
+- Name events/actions following the OnSomethingHappened pattern (e.g. `OnVictoriaGotTired`, `OnBenjiSucceeded`).
 
 
 ## Structure
-- Order of class fields: static, constant, serialized, properties, public variables, protected/private variables, standart Unity methods (by call order), other methods.
-- No global classes - every script belongs to a namespace. Each game must have its own namespace. Keep namespace structure aligned with folder hierarchy, but make it reasonable and no deeper than two levels (excluding game name).
+- Order of data structure fields: static, constant, serialized, properties, public variables, protected/private variables, standart Unity methods (by call order), other methods.
+- NO GLOBAL CLASSES - every script belongs to a namespace. Each game must have its own namespace. Keep namespace structure aligned with folder hierarchy, but make it reasonable and no deeper than two levels (excluding game name).
 ```csharp
 // Folder strusture: Game\Core\Audio\Managers.
 namespace Game.Core.Audio {}
@@ -46,11 +53,11 @@ private int myField;
 // Bad.
 public int MyMethod()
 {
-    return myVariable;
+    return myVariable + 1;
 }
 
 // Better.
-public int MyMethod() => myVariable;
+public int MyMethod() => myVariable++;
 
 // But...
 void Update()
